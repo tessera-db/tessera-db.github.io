@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" data-theme="glass">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tessera · Your phone. Your Drive. Nobody else.</title>
+<meta name="description" content="Tessera is a private database for Android. Build tables for anything, see them as boards, calendars and dashboards, and sync them to your own Google Drive. No account, ads or trackers.">
+<meta name="theme-color" content="#0b1230">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tessera · Your phone. Your Drive. Nobody else.">
+<meta property="og:description" content="A private database for Android: notes, checklists, due dates and totals in tables you design, synced to your own Google Drive.">
+<meta property="og:image" content="https://tessera-db.github.io/assets/og.jpg">
+<meta property="og:url" content="https://tessera-db.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/bricolage-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tessera.css">
+<script>(function(){var t;try{t=localStorage.getItem('tessera-theme')}catch(e){}if(t==='glass'||t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)})()</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 104 104">
+    <path style="fill:var(--m1)" d="M5.4,2 H35.5 A12.5,12.5 0 0 1 48,14.5 V35.5 A12.5,12.5 0 0 1 35.5,48 H14.5 A12.5,12.5 0 0 1 2,35.5 V5.4 A3.4,3.4 0 0 1 5.4,2 Z"/>
+    <path style="fill:var(--m2)" d="M59.4,2 H89.5 A12.5,12.5 0 0 1 102,14.5 V35.5 A12.5,12.5 0 0 1 89.5,48 H68.5 A12.5,12.5 0 0 1 56,35.5 V5.4 A3.4,3.4 0 0 1 59.4,2 Z"/>
+    <path style="fill:var(--m3)" d="M5.4,56 H35.5 A12.5,12.5 0 0 1 48,68.5 V89.5 A12.5,12.5 0 0 1 35.5,102 H14.5 A12.5,12.5 0 0 1 2,89.5 V59.4 A3.4,3.4 0 0 1 5.4,56 Z"/>
+    <path style="fill:var(--m4)" d="M59.4,56 H89.5 A12.5,12.5 0 0 1 102,68.5 V89.5 A12.5,12.5 0 0 1 89.5,102 H68.5 A12.5,12.5 0 0 1 56,89.5 V59.4 A3.4,3.4 0 0 1 59.4,56 Z"/>
+  </symbol>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Tessera home"><svg class="mark" aria-hidden="true"><use href="#mark"/></svg>Tessera</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#build">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#download">Download</a>
+    </nav>
+    <div class="theme-switch" role="group" aria-label="Theme">
+      <button type="button" data-set-theme="glass" aria-pressed="true" aria-label="Liquid Glass theme"><i class="swatch glass"></i><span class="lbl">Liquid Glass</span></button>
+      <button type="button" data-set-theme="dark" aria-pressed="false" aria-label="Dark theme"><i class="swatch dark"></i><span class="lbl">Dark</span></button>
+      <button type="button" data-set-theme="light" aria-pressed="false" aria-label="Light theme"><i class="swatch light"></i><span class="lbl">Light</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">A private database for Android</p>
+        <h1 id="hero-title"><span>Your phone.</span><span>Your Drive.</span><span class="gold">Nobody else.</span></h1>
+        <p class="lead">Build tables for anything you track, link them together, and turn them into <b>dashboards</b>. Your data lives on your phone and syncs to <b>your own Google Drive</b> if you want it to.</p>
+        <div class="cta-row">
+          <!-- GOOGLE PLAY: placeholder button. To use Google's official badge instead, see README.md -->
+          <a class="play" href="https://play.google.com/store/apps/details?id=com.tessera.app" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            <span><small>Get it on</small><b>Google Play</b></span>
+          </a>
+          <a class="btn btn-ghost" href="#build">See how it works</a>
+        </div>
+        <ul class="facts" aria-label="At a glance">
+          <li>Free to download</li>
+          <li>No account with us</li>
+          <li>No ads or trackers</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="mosaic">
+          <i></i><i class="f" style="background:var(--t-lapis)"></i><i></i><i></i><i></i><i class="f" style="background:var(--t-gold)"></i>
+          <i></i><i></i><i></i><i class="f" style="background:var(--t-teal)"></i><i></i><i></i>
+          <i class="f" style="background:var(--t-rose)"></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i class="f" style="background:var(--t-lav)"></i><i></i><i></i><i class="f" style="background:var(--t-sky)"></i>
+          <i></i><i></i><i></i><i></i><i class="f" style="background:var(--t-gold)"></i><i></i>
+          <i></i><i class="f" style="background:var(--t-teal)"></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="p p2"><div class="phone"><img data-shot="dash-a" src="assets/shots/glass-dash-a.webp" alt="" width="540" height="1200"></div></div>
+        <div class="p p3"><div class="phone"><img data-shot="gallery" src="assets/shots/glass-gallery.webp" alt="" width="540" height="1200"></div></div>
+        <div class="p p1"><div class="phone"><img data-shot="home" src="assets/shots/glass-home.webp" alt="" width="540" height="1200" fetchpriority="high"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANYTHING YOU TRACK -->
+  <section class="uses" aria-labelledby="uses-title">
+    <div class="wrap">
+      <div class="uses-copy">
+        <p class="eyebrow">Why Tessera exists</p>
+        <h2 id="uses-title">One app for everything <span class="gold">you keep track of.</span></h2>
+        <p>Quick notes lived in one app, the to-do list in another, due dates on a calendar, and every budget, stock list and collection wanted an app of its own. Each did one job, and none of them talked to each other.</p>
+        <p>Tessera puts it all in one place. Each part of your life gets its own library of tables, set up the way you want, and the same app tracks a reading list, a small shop or a classroom.</p>
+        <p class="sig">Designed and built by one developer.</p>
+      </div>
+      <ul class="wall" aria-label="Things people track in Tessera">
+        <li class="grp">Everyday</li>
+        <li style="--c:var(--t-lapis)"><i></i>Quick notes</li>
+        <li style="--c:var(--t-teal)"><i></i>To-do lists</li>
+        <li style="--c:var(--t-rose)"><i></i>Due dates</li>
+        <li style="--c:var(--t-gold)"><i></i>Bills</li>
+        <li style="--c:var(--t-sky)"><i></i>Subscriptions</li>
+        <li style="--c:var(--t-lav)"><i></i>Habits</li>
+        <li style="--c:var(--t-teal)"><i></i>Reading list</li>
+        <li style="--c:var(--t-rose)"><i></i>Recipes</li>
+        <li class="grp">Money and home</li>
+        <li style="--c:var(--t-gold)"><i></i>Monthly budget</li>
+        <li style="--c:var(--t-lapis)"><i></i>Expenses</li>
+        <li style="--c:var(--t-teal)"><i></i>Savings goals</li>
+        <li style="--c:var(--t-sky)"><i></i>Home inventory</li>
+        <li style="--c:var(--t-lav)"><i></i>Warranties</li>
+        <li style="--c:var(--t-rose)"><i></i>Plant care</li>
+        <li class="grp">Work and business</li>
+        <li style="--c:var(--t-lapis)"><i></i>Client jobs</li>
+        <li style="--c:var(--t-gold)"><i></i>Invoices</li>
+        <li style="--c:var(--t-teal)"><i></i>Stock and orders</li>
+        <li style="--c:var(--t-sky)"><i></i>Suppliers</li>
+        <li style="--c:var(--t-rose)"><i></i>Leads</li>
+        <li style="--c:var(--t-lav)"><i></i>Project timelines</li>
+        <li class="grp">Life and learning</li>
+        <li style="--c:var(--t-rose)"><i></i>Wedding guests</li>
+        <li style="--c:var(--t-gold)"><i></i>Trips</li>
+        <li style="--c:var(--t-teal)"><i></i>Health log</li>
+        <li style="--c:var(--t-lapis)"><i></i>Workouts</li>
+        <li style="--c:var(--t-lav)"><i></i>Class marks</li>
+        <li style="--c:var(--t-sky)"><i></i>Collections</li>
+        <li class="more">+ whatever you need next</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What you can build</p>
+        <h2 id="features-title">A database you design, <span class="gold">in your pocket.</span></h2>
+        <p>Create a library for anything: a shop, a wedding, a class, a side project. Each library holds tables, dashboards and scripts as tabs you swipe between.</p>
+      </div>
+      <div class="bento">
+        <article class="card surface c-4 c-wide">
+          <span class="ic" style="background:var(--t-lapis)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg></span>
+          <h3>Tables your way</h3>
+          <p>Start with no fields and add only what you need. Import a spreadsheet from CSV as a new table.</p>
+          <ul class="types" aria-label="Field types">
+            <li>Text</li><li>Numbers</li><li>Currency</li><li>Checkbox</li><li>Checklist</li><li>Date &amp; time</li><li>Duration</li><li>Rating</li><li>Choice list</li><li>Photos &amp; files</li><li>Links to tables</li><li>Formulas</li><li>JavaScript</li>
+          </ul>
+        </article>
+        <article class="card surface c-2">
+          <span class="ic" style="background:var(--t-teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <h3>Seven views</h3>
+          <p>List, table, board, gallery, calendar, timeline or cards. Each table keeps its own view.</p>
+        </article>
+        <article class="card surface c-2">
+          <span class="ic" style="background:var(--t-rose)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M9 6h6M8 8.5l7.5 7.5"/></svg></span>
+          <h3>Real relations</h3>
+          <p>Link records between tables, or relate them where two fields match. See it all in a relation diagram.</p>
+        </article>
+        <article class="card surface c-4 c-wide">
+          <span class="ic" style="background:var(--t-gold)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3>Dashboards across everything</h3>
+          <p>Metrics, bars, columns, donuts, trend lines, stacked charts, heatmap pivots, ranked tables and goal rings. Group and filter by fields in any related table, with colour rules that light up when a value crosses a line.</p>
+        </article>
+        <article class="card surface c-2">
+          <span class="ic" style="background:var(--t-sky)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 1 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></span>
+          <h3>Reminders</h3>
+          <p>Put a bell on any date field. Tessera reminds you at the right time, even after a restart.</p>
+        </article>
+        <article class="card surface c-2">
+          <span class="ic" style="background:var(--t-lav)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg></span>
+          <h3>Home-screen widgets</h3>
+          <p>Pin a metric, a dashboard insight or a one-tap "new record" button to your home screen.</p>
+        </article>
+        <article class="card surface c-2 c-wide">
+          <span class="ic" style="background:var(--t-teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+          <h3>Library locks</h3>
+          <p>Hide a library behind your fingerprint, face or screen lock, so a borrowed phone stays a borrowed phone.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILD IT UP -->
+  <section id="build" aria-labelledby="build-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="build-title">From one table <span class="gold">to a whole system.</span></h2>
+        <p>Every library starts as a single table. Add more tables, join them, put dashboards on top, and write a rule once to use it anywhere. Here's the Corner Shop sample, built up step by step.</p>
+      </div>
+      <ol class="stages" style="list-style:none;margin:0;padding:0">
+        <li class="stage surface">
+          <div class="screen nofade"><img data-shot="addtab" src="assets/shots/glass-addtab.webp" alt="The Add a tab sheet in the Corner Shop library: Table, Import CSV, Dashboard and Scripts" width="540" height="590" loading="lazy"></div>
+          <div class="txt">
+            <p class="step"><i>1</i>Tables</p>
+            <h3>Add as many tables as you need</h3>
+            <p>Tap + beside the tabs to add a table, import one from a CSV spreadsheet, or add a dashboard or a Scripts tab. Each table keeps its own fields, view, sort, filters and metric pills, so Products and Suppliers can look completely different.</p>
+            <div class="tabs-row" aria-label="Tabs in the Corner Shop library"><span class="k">Products</span><span class="k">Suppliers</span><span class="k">Orders</span><span>Overview</span><span>Scripts</span></div>
+          </div>
+        </li>
+        <li class="stage surface">
+          <div class="screen"><img data-shot="relations" src="assets/shots/glass-relations.webp" alt="The relation diagram joining Products to Suppliers and Orders to Products" width="540" height="590" loading="lazy"></div>
+          <div class="txt">
+            <p class="step"><i>2</i>Relations</p>
+            <h3>Join them together</h3>
+            <p>Every order picks its product, and every product picks its supplier. Or pair records automatically wherever two fields match, including dates in the same week, month or quarter. The diagram shows how it all connects.</p>
+          </div>
+        </li>
+        <li class="stage surface">
+          <div class="screen"><img data-shot="insight" src="assets/shots/glass-insight.webp" alt="The New insight sheet listing visuals: metric, bars, columns, donut, trend line, stacked, heatmap and more" width="540" height="590" loading="lazy"></div>
+          <div class="txt">
+            <p class="step"><i>3</i>Dashboards</p>
+            <h3>Add a dashboard on top</h3>
+            <p>Add a Dashboard tab and pick from fourteen visuals. Rows, values and conditions can come from any table in the library, joined through your relations, with a live preview as you build. Pin any card to your home screen.</p>
+          </div>
+        </li>
+        <li class="stage surface">
+          <div class="code-card" aria-label="Two scripts from the Corner Shop library">
+            <div class="script">
+              <header><b>Low stock</b><span>Condition</span></header>
+              <pre>in_stock &lt;= reorder_at</pre>
+            </div>
+            <div class="script">
+              <header><b>Reorder quantity</b><span>Value</span></header>
+              <pre><span class="c">// enough for four weeks of sales</span>
+const weekly = category == "Coffee" ? 8 : 4;
+Math.max(0, weekly * 4 - in_stock)</pre>
+            </div>
+            <div class="links"><em>Link a script to</em><span>Metric pills</span><span>Dashboard insights</span><span>Calculated fields</span><span>Field visibility</span></div>
+          </div>
+          <div class="txt">
+            <p class="step"><i>4</i>Scripts</p>
+            <h3>Write a rule once, reuse it everywhere</h3>
+            <p>A Scripts tab holds named JavaScript rules, like Low stock or Overdue. Link one wherever JavaScript is offered. Edit the script and everything linked to it updates. Scripts run in a sandbox with no network or file access.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- VIEWS -->
+  <section class="views" aria-labelledby="views-title">
+    <div class="wrap">
+      <div class="views-copy">
+        <p class="eyebrow">Same data, the view you need</p>
+        <h2 id="views-title" style="font-size:clamp(34px,4.6vw,54px)">Switch how you see it <span class="gold">in one tap.</span></h2>
+        <div class="tabs" role="tablist" aria-label="Views">
+          <button type="button" role="tab" aria-selected="true" aria-controls="view-panel" data-shot="gallery" data-title="Gallery" data-alt="Tessera gallery view of a shop's products with photos" data-text="Products with their photos, stock value and a low-stock pill, from the Corner Shop sample.">Gallery</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="view-panel" data-shot="orders" data-title="Board" data-alt="Tessera board view of orders grouped by status" data-text="Orders grouped by status, with an order count pill on top. Change a status and the dashboard follows.">Board</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="view-panel" data-shot="dash-a" data-title="Dashboard" data-alt="Tessera dashboard with stock value, a sales goal ring and stock by category" data-text="Stock value, a monthly sales goal ring and stock by category, all calculated from your tables.">Dashboard</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="view-panel" data-shot="y9-table" data-title="Table" data-alt="Tessera table view of student assessment marks" data-text="A teacher's assessments as a plain table: students, topics and marks, ready to sort and filter.">Table</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="view-panel" data-shot="y9-dash-a" data-title="Progress" data-alt="Tessera dashboard with class average and a heatmap of marks by student and topic" data-text="The same marks as a class average ring and a heatmap by student and topic.">Progress</button>
+        </div>
+        <div class="view-note" id="view-panel" role="tabpanel" aria-live="polite">
+          <h3 id="view-title">Gallery</h3>
+          <p id="view-text">Products with their photos, stock value and a low-stock pill, from the Corner Shop sample.</p>
+        </div>
+        <p class="also">Also list, calendar, timeline and cards. Four sample libraries come ready to explore, so there's nothing to set up first.</p>
+      </div>
+      <div class="views-art">
+        <div class="phone"><img id="view-shot" data-shot="gallery" src="assets/shots/glass-gallery.webp" alt="Tessera gallery view of a shop's products with photos" width="540" height="1200" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Where your data lives</p>
+        <h2 id="privacy-title">Two places. <span class="gold">Both of them yours.</span></h2>
+        <p>There is no Tessera account and no Tessera server. Your libraries stay on your phone, and a copy goes to your own Google Drive only for the libraries you choose to sync.</p>
+      </div>
+      <div class="flow">
+        <div class="node surface">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+          <span class="tag always">Always</span>
+          <h3>Your phone</h3>
+          <p>Libraries, records, attachments and settings are kept in the app's private storage. Tessera works fully offline.</p>
+        </div>
+        <div class="link" aria-hidden="true">
+          <svg viewBox="0 0 64 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h60M52 3l9 7-9 7M12 3 3 10l9 7"/></svg>
+          <span>HTTPS</span>
+        </div>
+        <div class="node surface">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a5 5 0 0 1-.6-10A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></svg>
+          <span class="tag optional">Optional · off by default</span>
+          <h3>Your Google Drive</h3>
+          <p>Turn on sync for a library and it's copied to a Tessera folder in your own Drive, kept up to date across your devices.</p>
+        </div>
+      </div>
+      <div class="nobody">
+        <span class="zero" aria-hidden="true">0</span>
+        <div><b>Tessera servers</b><span>The developer runs none, so your data never passes through anyone else.</span></div>
+      </div>
+      <div class="promises">
+        <article class="card surface"><h3>No account with us</h3><p>Nothing to sign up for. Google sign-in is only for Drive sync, and only if you turn it on.</p></article>
+        <article class="card surface"><h3>No ads or trackers</h3><p>No advertising, no analytics and no crash-reporting services.</p></article>
+        <article class="card surface"><h3>Drive, fenced off</h3><p>Tessera can only open the files it creates in your Drive. It can't see anything else there.</p></article>
+        <article class="card surface"><h3>Pro via Google Play</h3><p>An optional one-time purchase. Google Play handles payment, so Tessera never sees your card.</p></article>
+      </div>
+      <p class="more"><a class="btn btn-ghost" href="https://tessera-db.github.io/privacy-policy/">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <!-- THEMES -->
+  <section id="themes" aria-labelledby="themes-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Three looks</p>
+        <h2 id="themes-title">Pick a theme. <span class="gold">This page will follow.</span></h2>
+        <p>The same three themes as the app. Tap one to try it here, or let Tessera follow your phone's system setting.</p>
+      </div>
+      <div class="themes-grid">
+        <button type="button" class="theme-card surface" data-set-theme="glass" aria-pressed="true">
+          <div class="phone"><img src="assets/shots/glass-home.webp" alt="" width="540" height="1200" loading="lazy"></div>
+          <b><i class="swatch glass"></i>Liquid Glass</b>
+          <span>Translucent panels over a lapis glow. The default.</span>
+          <em class="state"></em>
+        </button>
+        <button type="button" class="theme-card surface" data-set-theme="dark" aria-pressed="false">
+          <div class="phone"><img src="assets/shots/dark-home.webp" alt="" width="540" height="1200" loading="lazy"></div>
+          <b><i class="swatch dark"></i>Dark</b>
+          <span>Deep navy with solid surfaces, easy on the eyes at night.</span>
+          <em class="state"></em>
+        </button>
+        <button type="button" class="theme-card surface" data-set-theme="light" aria-pressed="false">
+          <div class="phone"><img src="assets/shots/light-home.webp" alt="" width="540" height="1200" loading="lazy"></div>
+          <b><i class="swatch light"></i>Light</b>
+          <span>Bright and crisp for daylight.</span>
+          <em class="state"></em>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download" aria-labelledby="download-title">
+    <div class="wrap">
+      <div class="get surface">
+        <div class="get-copy">
+          <p class="eyebrow">Get Tessera</p>
+          <h2 id="download-title">Free on <span class="gold">Google Play.</span></h2>
+          <p>Download Tessera and open one of the four sample libraries to see what it can do, or start your own from a blank table.</p>
+          <div class="cta-row"><!-- GOOGLE PLAY: placeholder button. To use Google's official badge instead, see README.md -->
+          <a class="play" href="https://play.google.com/store/apps/details?id=com.tessera.app" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            <span><small>Get it on</small><b>Google Play</b></span>
+          </a></div>
+          <p class="fine">Android 5.0 and up. Tessera Pro is a one-time in-app purchase with no subscription. Google Play shows the price and handles payment.</p>
+        </div>
+        <div class="plans">
+          <div class="plan">
+            <h3>Free <small>Download</small></h3>
+            <ul>
+              <li>Unlimited libraries, tables and records</li>
+              <li>All field types and all seven views</li>
+              <li>1 library synced with Google Drive at a time</li>
+              <li>Per library: 1 metric, 1 dashboard insight and 1 widget of each kind</li>
+            </ul>
+          </div>
+          <div class="plan pro">
+            <h3>Pro <small>One-time</small></h3>
+            <ul>
+              <li>Everything in Free</li>
+              <li>Unlimited synced libraries</li>
+              <li>Unlimited metrics, insights and widgets</li>
+              <li>Comes back by itself on a new phone with the same Google Play account</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="brand" href="./"><svg class="mark" aria-hidden="true"><use href="#mark"/></svg>Tessera</a>
+    <span>A private database for Android.</span>
+    <nav aria-label="Footer">
+      <a href="https://tessera-db.github.io/privacy-policy/">Privacy policy</a>
+      <a href="https://play.google.com/store/apps/details?id=com.tessera.app" target="_blank" rel="noopener">Google Play</a>
+      <span>© 2026 Tessera</span>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/tessera.js"></script>
+</body>
+</html>
